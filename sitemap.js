@@ -30,10 +30,16 @@ input.addEventListener("change", async function () {
 
   //Test
   for(i=0;i<4;i++){
-    window["_elem_layer_"+i] = document.createElement("div");
+    window["_elem_layer_"+i] = document.createElement("div");//각 레이어층 elem
+    window["_elem_layer_"+i].id = `_elem_layer_${i}`; // id 속성 설정
+
     layer_container.appendChild(window["_elem_layer_"+i])
-    
+
     for(a of window["_window"+i]){
+
+        if(document.getElementById(`_elem_layer_${i}`)!=null){
+            console.log("있음.")//여기부터 다시
+        };
         sitemap.push(a)
     }
   }
