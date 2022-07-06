@@ -1,0 +1,29 @@
+/* layout */
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: aquamarine;
+    justify-content: space-around;
+    
+    height: 20rem;
+    margin: 10px;
+}
+.container{
+    /* display: grid;
+    justify-content: space-around;
+
+    margin: 10px;
+    grid-template-areas: "header header header"
+                         "a      main     b"
+                         " .       .       ."
+                        "footer footer footer";
+    grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+    grid-auto-rows: minmax(100px,auto); */
+
+    display: flex;
+    flex-direction: column;
+    
+    background-color: bisque;
+    border: 1px solid black;
+}
