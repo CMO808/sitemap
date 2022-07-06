@@ -7,11 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-<div id="_1"></div>
+    <div id="stage">
+        <canvas id="ui-layer" width="480" height="320"></canvas>
+        <canvas id="game-layer" width="480" height="320"></canvas>
+        <canvas id="background-layer" width="480" height="320"></canvas>
+      </div>
+      
+      <style>
+        #stage {
+          width: 480px;
+          height: 320px;
+          position: relative;
+          border: 2px solid black;
+        }
+      
+        canvas { position: absolute; }
+        #ui-layer { z-index: 3; }
+        #game-layer { z-index: 2; }
+        #background-layer { z-index: 1; }
+      </style>
 </body>
 <script>
-    let _1 = 1
-    console.log(_1)
-    console.log(window._1)
+    const canvas = document.getElementById('ui-layer');
+    const ctx = canvas.getContext('2d');
+    ctx.beginPath()
+    ctx.moveTo(0,0);
+    ctx.lineTo(100,100);
+    ctx.stroke();
 </script>
 </html>

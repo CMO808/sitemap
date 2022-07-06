@@ -23,7 +23,7 @@
 
     display: flex;
     flex-direction: column;
-    
+    /* flex-flow: wrap; */
     background-color: bisque;
     border: 1px solid black;
 }
